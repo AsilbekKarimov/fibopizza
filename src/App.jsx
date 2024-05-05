@@ -1,13 +1,10 @@
-import { useState } from 'react'
+import DeliveryCart from './components/DeliveryCart'
 
 
-function App() {
-
-  return (
-    <>
-      <p>Hello World</p>
-    </>
-  )
-}
+const App = () => (
+  <>
+    <DeliveryCart />
+  </>
+);
 
 export default App

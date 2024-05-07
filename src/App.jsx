@@ -1,9 +1,7 @@
-import DeliveryCart from './components/DeliveryCart'
-
+import React from "react";
 
 const App = () => (
   <>
-    <DeliveryCart />
   </>
 );
 

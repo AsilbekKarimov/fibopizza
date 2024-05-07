@@ -5,7 +5,7 @@ import NewBadge from '../other/NewBadge'
 const Card = (props) => {
   return (
     <div>
-      <div className='w-[256px] h-[464px] flex  justify-start flex-col'>
+      <div className='w-[256px] h-[464px] flex  justify-start flex-col mb-[49px]'>
         <div className='flex justify-center mb-[8px]'>
             <div className='relative'>
                 <img src={props.img} alt="" />

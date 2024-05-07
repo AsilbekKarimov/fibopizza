@@ -92,7 +92,7 @@ const Sales = () => {
             </>
           )}
         </div>
-        <button className="btn bg-[#F7D22D] rounded-[23px] py-[10px] px-[40px] mt-[48.5px] hover:border-inherit font-bold text-white hover:text-black">
+        <button className="btn bg-[#F7D22D] rounded-[23px] py-[10px] px-[40px] mt-[48.5px] hover:border-inherit font-bold text-white hover:text-black mb-16">
           Все aкции
         </button>
       </div>

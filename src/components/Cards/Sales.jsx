@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import SalesCard from "./cards/SalesCard";
+import SalesCard from "./SalesCard";
 
 const Sales = () => {
   const [salesCard, setSalesCard] = useState([]);
@@ -88,13 +88,12 @@ const Sales = () => {
                     divClass={sale.divClass}
                     imgClass={sale.imgClass}
                   />
-                  
                 ))}
               </div>
             </>
           )}
         </div>
-        <button className="btn bg-[#F7D22D] rounded-[23px] py-[10px] px-[40px] mt-[48.5px] hover:border-inherit font-bold text-white hover:text-black">
+        <button className="btn bg-[#F7D22D] rounded-[23px] py-[10px] px-[40px] mt-[48.5px] mb-[62px] hover:border-inherit font-bold text-white hover:text-black">
           Все aкции
         </button>
       </div>

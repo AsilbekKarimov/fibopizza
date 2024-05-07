@@ -1,4 +1,4 @@
-import DeliveryCart from './components/DeliveryCart'
+import React from "react";
 
 
 function App() {

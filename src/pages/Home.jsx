@@ -2,6 +2,7 @@ import React from "react";
 import DeliveryCart from "../components/DeliveryCart";
 import Sales from "../components/Cards/Sales";
 import Cards from "../components/Cards/Cards";
+import Footer from "../components/Footer";
 
 const Home = () => {
   return (
@@ -12,7 +13,9 @@ const Home = () => {
         <Sales />
         <DeliveryCart />
       </main>
-      <footer></footer>
+      <footer>
+      <Footer />
+      </footer>
     </div>
   );
 };

@@ -8,7 +8,7 @@ const Card = (props) => {
       <div className='w-[256px] h-[464px] flex  justify-start flex-col mb-[49px]'>
         <div className='flex justify-center mb-[8px]'>
             <div className='relative'>
-                <img src={props.img} className='w-[253px] h-[253px]' alt="" />
+                <img src={props.img} className='w-[253px] h-[253px] rounded-full' alt="" />
                 {
                     props.new === true
                     ?

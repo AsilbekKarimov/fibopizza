@@ -29,6 +29,11 @@ const Cards = () => {
       ? `${description.substring(0, maxLength - 3)}...`
       : description;
 
+      const truncateTitle = (title, maxLength) =>
+        title.length > maxLength
+          ? `${title.substring(0, maxLength - 3)}...`
+          : title;
+
   return (
     <div className="container w-[82%] mx-auto">
       <p className="text-[#F7D22D] text-[32px] font-extrabold mb-[26px]">
@@ -39,20 +44,23 @@ const Cards = () => {
           ? Array.from({ length: productCount }).map((_, index) => (
               <CardLoading key={index} />
             ))
-          : products.map((item, id) => (
-              <div key={id}>
-                <Card
-                  img={item.avatar}
-                  new={item.new}
-                  title={item.title}
-                  description={truncateDescription(item.description, 120)}
-                  price={"$" + item.price}
-                />
-              </div>
-            ))}
+          : 
+          products.map((item, id) => (
+  <div key={id}>
+    <Card
+      img={item.avatar}
+      new={item.new}
+      title={truncateDescription(item.title, 19)}
+      description={truncateDescription(item.description, 120)}
+      price={"$" + item.price}
+    />
+  </div>
+))}
       </div>
     </div>
   );
 };
 
 export default Cards;
+
+

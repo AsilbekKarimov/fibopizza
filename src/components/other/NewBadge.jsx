@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 const NewBadge = () => {
   return (
@@ -8,4 +8,4 @@ const NewBadge = () => {
   )
 }
 
-export default NewBadge
+export default NewBadge;

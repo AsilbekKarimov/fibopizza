@@ -58,19 +58,19 @@ const Sales = () => {
 
   return (
     <>
-      <div className="flex flex-col items-center justify-center">
-        <div className="flex items-center justify-center gap-3 mt-[64px] mb-[47px]">
+      <div className="flex flex-col items-center">
+        <div className="flexgap-3 mt-[64px] mb-[47px]">
           <span className="text-[44px] font-extrabold text-black">Наши </span>
           <span className="text-[44px] font-extrabold text-[#F7D22D]">
             акции
           </span>
         </div>
-        <div className="flex justify-center items-center">
+        <div className="flex items-center">
           {loading ? (
             <p>Loading...</p>
           ) : (
             <>
-              <div className="flex items-center justify-center">
+              <div className="flex">
                 <SalesCard
                   key={salesCard[0].id}
                   img={salesCard[0].img}
@@ -80,9 +80,9 @@ const Sales = () => {
                 />
               </div>
               <div className="flex flex-wrap gap-6 w-[590px] items-center justify-center">
-                {salesCard.slice(1).map((sale, index) => (
+                {salesCard.slice(1).map((sale) => (
                   <SalesCard
-                    key={sale.id + "_" + index}
+                    key={sale.id}
                     img={sale.img}
                     alt={sale.alt}
                     divClass={sale.divClass}

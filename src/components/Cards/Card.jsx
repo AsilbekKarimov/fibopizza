@@ -1,6 +1,6 @@
 import React from 'react'
 import Button from '../Button'
-import NewBadge from '../other/NewBadge'
+import NewBadge from '../others/NewBadge/NewBadge'
 
 const Card = (props) => {
   return (

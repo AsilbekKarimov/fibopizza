@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import SalesCard from "./SalesCard";
-
 const Sales = () => {
   const [salesCard, setSalesCard] = useState([]);
   const [loading, setLoading] = useState(true);

@@ -4,13 +4,18 @@ const NavbarCategories = () => {
   const [itemCount, setItemCount] = useState(0);
 
   const addCount = () => setItemCount(itemCount + 1);
-  const subtractCount = () => setItemCount(itemCount - 1);
+  const subtractCount = () => {
+    itemCount > 0
+      ? setItemCount(itemCount - 1)
+      : setItemCount(0);
+  };
+
   const priceCount = itemCount * 120;
 
   return (
-    <div className="flex">
-      <div className="flex w-full max-w-[82%] mx-auto">
-        <div className="flex text-[#0E0C0D] sm:flex-col lg:flex-row justify-between gap-[1%] font-bold items-center flex-grow">
+    <div className="flex justify-center">
+      <div className="w-full max-w-[82%] mx-auto flex flex-col sm:flex-row lg:flex-row">
+        <div className="flex text-[#0E0C0D] justify-center sm:justify-start lg:justify-between gap-[1%] font-bold items-center flex-grow">
           <p>Пицца</p>
           <p>Паста</p>
           <p>Супы</p>

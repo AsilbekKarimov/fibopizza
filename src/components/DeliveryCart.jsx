@@ -20,7 +20,6 @@ const DeliveryCart = () => {
       let endTime = Date.now()
 
       console.log((endTime - startTime) / 1000 + "ms")
-      console.log(response)
       setCard(response);
       setLoading(true);
     }

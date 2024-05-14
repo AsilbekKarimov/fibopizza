@@ -38,7 +38,7 @@ function NewApp() {
             <Swiper
               spaceBetween={30}
               slidesPerView={4}
-              navigation={true}
+              navigation={false} // Убираем навигационные стрелки
             >
               {newCards.map((item, index) => (
                 <SwiperSlide key={index}>

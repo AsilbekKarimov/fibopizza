@@ -27,7 +27,7 @@ function NewApp() {
   }, []);
 
   return (
-    <div className="NewApp">
+    <div className="NewApp max-w-[85%] mx-auto">
       {loading ? ( 
         <div className="flex justify-center items-center h-screen">
           <span className="loading loading-spinner loading-lg"></span>

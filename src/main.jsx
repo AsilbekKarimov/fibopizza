@@ -8,8 +8,10 @@ import Action from "./pages/Action";
 import Basket from "./pages/Cart/Basket";
 import Ordering from "./pages/Cart/Ordering";
 import Accepted from "./pages/Cart/Accepted";
+import NewCards from "./components/Cards/NewCards";
 
 const router = createBrowserRouter([
+
   {
     path: "/",
     element: <Home />,
@@ -34,7 +36,7 @@ const router = createBrowserRouter([
     path: "/accepted",
     element: <Accepted />,
   },
-]);
+]); 
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

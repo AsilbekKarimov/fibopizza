@@ -6,9 +6,9 @@ const NewCards = ({ title, img, price }) => {
   const handleImageLoad = () => {
     setImageLoading(false);
   };
-
+  //news card
   return (
-     <div className="bg-white flex-1 min-w-[24%]">
+     <div className="bg-white flex-1 min-w-[24%] py-10">
       <div className="flex items-center bg-gray-100 p-3 rounded-xl">
         <div>
           {imageLoading && <span className="loading loading-spinner loading-lg"></span>}

@@ -1,8 +1,11 @@
 import React from 'react'
+import CardSales from './CardSales'
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <div>
+      <CardSales />
+    </div>
   )
 }
 

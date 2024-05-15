@@ -16,7 +16,6 @@ const Home = () => {
         <NavbarCategories />
       </header>
       <main>
-
         <NewApp />
         <Cards />
         <Sales />

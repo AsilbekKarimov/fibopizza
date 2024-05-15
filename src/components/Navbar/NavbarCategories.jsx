@@ -1,20 +1,20 @@
 import React, { useState } from "react";
+import ThemeToggle from "../ThemeToggle";
+import { ThemeProvider, useTheme } from "../../context/ThemeContext";
 
 const NavbarCategories = () => {
   const [itemCount, setItemCount] = useState(0);
 
   const addCount = () => setItemCount(itemCount + 1);
   const subtractCount = () => {
-    itemCount > 0
-      ? setItemCount(itemCount - 1)
-      : setItemCount(0);
+    itemCount > 0 ? setItemCount(itemCount - 1) : setItemCount(0);
   };
 
   const priceCount = itemCount * 120;
 
   return (
     <div className="flex justify-center">
-      <div className="w-full max-w-[82%] mx-auto flex flex-col sm:flex-row lg:flex-row">
+      <div className="w-full max-w-[82%] mx-auto flex flex-col sm:flex-row lg:flex-row gap-[2%]">
         <div className="flex text-[#0E0C0D] justify-center sm:justify-start lg:justify-between gap-[1%] font-bold items-center flex-grow">
           <p>Пицца</p>
           <p>Паста</p>
@@ -27,10 +27,15 @@ const NavbarCategories = () => {
           <p>Комбо</p>
           <p>Контакты</p>
         </div>
-        <div className="flex items-center gap-2">
-          <button className="font-extrabold text-[#696F7A] mx-[30px]">
-            Войти
-          </button>
+        <div className="flex items-center gap-[5%]">
+          <div>
+            <button className="font-extrabold text-[#696F7A]">Войти</button>
+          </div>
+          <div>
+            <ThemeProvider>
+              <ThemeToggle />
+            </ThemeProvider>
+          </div>
           <div className="dropdown dropdown-end ">
             <div
               tabIndex={0}

@@ -6,7 +6,6 @@ import 'swiper/swiper-bundle.css';
 function NewApp() {
   const [newCards, setNewCards] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [isSwiper, setIsSwiper] = useState(false); 
 
   useEffect(() => {
     const fetchNewCards = async () => {
@@ -16,8 +15,8 @@ function NewApp() {
           throw new Error('Failed to fetch new cards');
         }
         const data = await response.json();
-        setNewCards(data);
-        setIsSwiper(data.length > 4);
+        // Slice the array to include only the first 5 elements
+        setNewCards(data.slice(0, 5));
       } catch (error) {
         console.error('Error fetching new cards:', error);
       } finally {
@@ -36,33 +35,18 @@ function NewApp() {
         </div>
       ) : (
         <>
-          {isSwiper ? ( 
-            <div className="relative">
-              <Swiper
-                spaceBetween={30}
-                slidesPerView={4}
-                navigation={{
-                  prevEl: '.swiper-button-prev',
-                  nextEl: '.swiper-button-next'
-                }}
-              >
-                {newCards.map((item, index) => (
-                  <SwiperSlide key={index}>
-                    <NewCards title={item.title} img={item.img} price={item.price} />
-                  </SwiperSlide>
-                ))}
-              </Swiper>
-              <div className="absolute left-0 top-1/2 transform -translate-y-1/2">
-                <div className="swiper-button-prev bg-yellow-500 w-10 h-10 flex items-center justify-center rounded-full shadow-md">
-                  &lt;
-                </div>
-              </div>
-              <div className="absolute right-0 top-1/2 transform -translate-y-1/2">
-                <div className="swiper-button-next bg-yellow-500 w-10 h-10 flex items-center justify-center rounded-full shadow-md">
-                  &gt;
-                </div>
-              </div>
-            </div>
+          {newCards.length > 4 ? (
+            <Swiper
+              spaceBetween={30}
+              slidesPerView={4}
+              loop={true}
+            >
+              {newCards.map((item, index) => (
+                <SwiperSlide key={index}>
+                  <NewCards title={item.title} img={item.img} price={item.price} />
+                </SwiperSlide>
+              ))}
+            </Swiper>
           ) : (
             <div className="flex items-center flex-wrap">
               {newCards.map((item, index) => (

@@ -6,9 +6,9 @@ import PhoneNumber from "./others/PhoneNum/PhoneNumber";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
-  const TextClassList = ["leading-[28px]", "text-[#0E0C0D]", "text-[16px]"];
+  const TextClassList = ["leading-[28px]", "text-[16px]"];
   return (
-    <div className="bg-white relative">
+    <div className="relative">
       <img
         src="/footer-img/absolute-logo.png"
         alt=""
@@ -46,7 +46,7 @@ const Footer = () => {
             <p className="w-[163px]">Москва ул. Проспект Вернадского 86В</p>
           </div>
           <div className="flex gap-[160px]">
-            <p className="mt-[45px] mb-[71px] text-[#0E0C0D] w-full">
+            <p className="mt-[45px] mb-[71px] w-full">
               YaBao Все праав защищены © 2021
             </p>
             <div className="flex items-center justify-center gap-[23px]">
@@ -57,7 +57,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="w-[50%]">
-          <p className="font-bold leading-[17px] text-[20px] mb-[33px] text-black">
+          <p className="font-bold leading-[17px] text-[20px] mb-[33px]">
             Остались вопросы? А мы всегда на связи:
           </p>
           <div className="flex flex-wrap gap-[14px]">
@@ -81,7 +81,7 @@ const Footer = () => {
             </Link>
             <Link to="">
               <div className="flex items-center justify-center w-[216px] h-[50px] border-[2px] rounded-[13px] border-[#E3ECF5]">
-                <p className="text-[13px] font-bold leading-[16px] text-black">
+                <p className="text-[13px] font-bold leading-[16px]">
                   Написать нам
                 </p>
               </div>

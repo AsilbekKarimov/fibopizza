@@ -28,7 +28,7 @@ const DeliveryCart = () => {
 
 
   return (
-    <div className='bg-[#E3ECF5] h-[688px]'>
+    <div className='h-[688px]'>
       {
         loading
           ?

@@ -46,7 +46,7 @@ const NavbarCategories = () => {
             </div>
             <ul
               tabIndex={0}
-              className="dropdown-content z-[1] p-2 shadow bg-base-100 rounded-box w-[349px]"
+              className="dropdown-content z-[10] p-2 shadow bg-base-100 rounded-box w-[349px]"
             >
               <li>
                 <div className="flex gap-[17px] hover:bg-gray-2 00 hover:rounded-lg p-2">

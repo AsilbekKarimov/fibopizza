@@ -4,8 +4,7 @@ import Sales from "../components/Cards/Sales";
 import Cards from "../components/Cards/Cards";
 import Footer from "../components/Footer";
 import NavbarCategories from "../components/Navbar/NavbarCategories";
-import BasketCards from "../components/BasketCards/BasketCards";
-
+import FoodSwiper from "../components/FoodSwiper";
 import NewCards from "../components/Cards/NewCards";
 import NewApp from "../components/Cards/NewApp";
 
@@ -17,6 +16,7 @@ const Home = () => {
         <NavbarCategories />
       </header>
       <main>
+        <FoodSwiper />
         <NewApp />
         <Cards />
         <Sales />

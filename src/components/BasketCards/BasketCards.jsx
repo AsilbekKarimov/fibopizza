@@ -5,6 +5,11 @@ const BasketCards = () => {
   const [loading, setLoading] = useState(true);
   const [itemCounts, setItemCounts] = useState({});
 
+  const truncateDescription = (description, maxLength) =>
+    description.length > maxLength
+      ? `${description.substring(0, maxLength - 3)}...`
+      : description;
+
   useEffect(() => {
     async function fetchData() {
       try {
@@ -42,33 +47,36 @@ const BasketCards = () => {
   };
 
   if (loading) {
-    return <div>Loading...</div>;
+    return (
+      <div className="flex items-center justify-center h-screen">
+        <span className="loading loading-bars loading-lg"></span>
+      </div>
+    );
   }
 
   return (
-    <div>
-      <div className="flex flex-col container max-w-[50%] mx-auto">
+    <div className="flex flex-col container max-w-[90%] mx-auto items-center justify-center">
+      <div className="flex items-start">
         <span className="text-[#F7D22D] text-[36px] font-extrabold">
           Корзина
         </span>
       </div>
       <div className="flex gap-[17px] p-2 flex-wrap w-[50%]">
         {products.map((item) => (
-          <div key={item.id} className="flex justify-around gap-4 p-4 border-b-2 w-[800px]">
-            <img
-              src={item.image}
-              className="size-[71px]"
-              alt={item.name}
-            />
+          <div
+            key={item.id}
+            className="flex justify-around gap-4 p-4 border-b-2 w-[800px] items-center"
+          >
+            <img src={item.image} className="size-[71px]" alt={item.name} />
             <div className="flex flex-col gap-[9px]">
               <p className="font-bold text-[19px]">{item.title}</p>
               <p className="font-medium text-[#686466] text-[13px] max-w-[60%]">
-                {item.description}
+                {truncateDescription(item.description, 50)}
               </p>
             </div>
             <div className="flex items-center gap-8">
               <p className="font-bold text-[20px] text-[#F7D22D]">
-                { itemCounts[item.id] * item.price}₽
+                {itemCounts[item.id] * item.price}₽
               </p>
               <div className="py-2 px-5 bg-[#F3F3F7] justify-around rounded-[8px] flex items-center text-[#696F7A]">
                 <button

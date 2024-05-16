@@ -13,35 +13,35 @@ const Sales = () => {
             img: "public/Sales.png",
             alt: "Sale 1",
             divClass: "card1",
-            imgClass: "w-[541px] h-[405.5px]",
+            imgClass: "w-[541px] h-[405.5px] rounded-3xl",
           },
           {
             id: 2,
             img: "public/Sales.png",
             alt: "Sale 2",
             divClass: "card2",
-            imgClass: "w-[256px] h-[189px]",
+            imgClass: "w-[256px] h-[189px] rounded-3xl",
           },
           {
             id: 2,
             img: "public/Sales.png",
             alt: "Sale 2",
             divClass: "card2",
-            imgClass: "w-[256px] h-[189px]",
+            imgClass: "w-[256px] h-[189px] rounded-3xl",
           },
           {
             id: 2,
             img: "public/Sales.png",
             alt: "Sale 2",
             divClass: "card2",
-            imgClass: "w-[256px] h-[189px]",
+            imgClass: "w-[256px] h-[189px] rounded-3xl",
           },
           {
             id: 2,
             img: "public/Sales.png",
             alt: "Sale 2",
             divClass: "card2",
-            imgClass: "w-[256px] h-[189px]",
+            imgClass: "w-[256px] h-[189px] rounded-3xl",
           },
         ];
         setSalesCard(salesData);
@@ -58,13 +58,13 @@ const Sales = () => {
   return (
     <>
       <div className="flex flex-col items-center">
-        <div className="flexgap-3 mt-[64px] mb-[47px]">
+        <div className="flex gap-3 mt-[64px] mb-[47px]">
           <span className="text-[44px] font-extrabold text-black">Наши </span>
           <span className="text-[44px] font-extrabold text-[#F7D22D]">
             акции
           </span>
         </div>
-        <div className="flex items-center">
+        <div className="flex justify-center gap-7">
           {loading ? (
             <p>Loading...</p>
           ) : (
@@ -78,7 +78,7 @@ const Sales = () => {
                   imgClass={salesCard[0].imgClass}
                 />
               </div>
-              <div className="flex flex-wrap gap-6 w-[590px] items-center justify-center">
+              <div className="flex flex-wrap gap-7 w-[36%] justify-center rounded-3xl">
                 {salesCard.slice(1).map((sale) => (
                   <SalesCard
                     key={sale.id}
@@ -92,7 +92,7 @@ const Sales = () => {
             </>
           )}
         </div>
-        <button className="btn bg-[#F7D22D] rounded-[23px] py-[10px] px-[40px] mt-[48.5px] mb-[62px] hover:border-inherit font-bold text-white hover:text-black">
+        <button className="btn bg-[#F7D22D] rounded-[23px] py-[10px] px-[40px] mt-[48.5px] mb-[62px] hover:border-inherit font-bold text-white hover:bg-yellow-300">
           Все aкции
         </button>
       </div>

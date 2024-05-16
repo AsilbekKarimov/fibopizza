@@ -33,7 +33,7 @@ const DeliveryCart = () => {
         loading
           ?
           <div className='flex flex-col items-center justify-center'>
-            <h1 className='text-[30px] font-extrabold text-[#F7D22D] pt-[56px]'>Оплата и Доставка</h1>
+            <h1 className='text-[30px] font-extrabold text-[#F7D22D] pt-[56px]'>Оплата и Доставка Аптамата</h1>
             <div className='flex items-center justify-center gap-[30px] mb-[32px]'>
               {card.map((item, id) => (
                 <DeliverInfoCart key={id} text={truncateText(item.text, 50)} img={item.image} />

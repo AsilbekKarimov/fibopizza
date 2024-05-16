@@ -88,7 +88,7 @@ const Footer = () => {
             </Link>
           </div>
           <PhoneNumber tel="8 499 391-84-49" />
-          <ContactButton tel="+8 499 391-84-49" text="Заказать звонок" />
+          <ContactButton tel="+998335181855" text="Заказать звонок" />
         </div>
       </div>
     </div>
